@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void(^OrderBlock)(id);
 
 @protocol ZTOrderProtocol <NSObject>
 
+@required;
 - (UIViewController *)confirmOrderViewControllerWithGoodsId:(NSString *)goodsId sureComplete:(OrderBlock)sureComplete;
 
 @end
